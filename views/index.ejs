@@ -1,0 +1,55 @@
+<%-include("./partials/header")-%>
+	
+<!-- <%blogs.forEach(function(blog){%>
+<%=blog.Fname%>
+<%=blog.Lname%>
+<%=blog.image%>
+<%=blog.content%>
+<%=blog.Favfood%>
+<%=blog.created%>
+	<%})%> -->
+
+<h3 class="ui center aligned header">
+	CREATIVE BLOG
+</h3>
+<div class= "ui container">
+	<div class="ui divided items">
+		<%blogs.forEach(function(blog){%>
+			
+				<div class="content">
+					<a class="header"><%=blog.Fname%> <%=blog.Lname%></a>
+					<div class="item">
+					<div class="ui small image">
+						<img src="<%=blog.image%>">
+						</div>
+					</div>
+					<div class="meta">
+						<a><%=blog.created.toDateString()%></a>
+						<a>Intresting</a>
+					</div>
+					<div class="description">
+						<%=blog.content%>
+					</div>
+					<div class="extra">
+						<p>
+							My favorite food is: 
+						</p>
+						<%=blog.Favfood%>
+					</div>
+				</div>
+		<%})%>
+		</div>
+	</div>
+</div>
+
+	
+
+
+
+
+
+
+
+
+
+<%-include("./partials/footer")-%>
