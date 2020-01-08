@@ -1,0 +1,50 @@
+
+<%-include("./partials/header")-%>
+<div class="ui main text container segment">
+	<form class="ui form" action="/blogs/<%=blog._id%>?_method=PUT" method="POST">
+  <h4 class="ui dividing huge header center aligned">ABOUT YOU</h4>
+  <div class="field">
+    
+    <div class="two fields">
+      <div class="field">
+		  <label>FIRST NAME:</label>
+        <input type="text" name="blog[Fname]" value="<%=blog.Fname%>">
+      </div>
+      <div class="field">
+		  <label>LAST NAME:</label>
+        <input type="text" name="blog[Lname]" value="<%=blog.Lname%>">
+      </div>
+		
+    </div>
+  </div>
+
+	<div class="two fields">
+		<div class="field">
+			<label >IMAGE:</label>
+			<input type="text" name="blog[image]" value="<%=blog.image%>">
+		</div>
+		<div class="field">
+			<label>FAVORITE FOOD:</label>
+			<input type="text" name="blog[food]" value="<%=blog.food%>">
+		</div>
+	</div>
+  
+  <h4 class="ui center aligned dividing header">CONTENT</h4>
+ 
+   <div class="ui form">
+  <div class="field">
+    <label style="text-align:center">Summary</label>
+    <textarea required name="blog[content]"><%-blog.content%></textarea>
+  </div>
+	<div class="extra">
+        <button type="submit" class="ui Purple button">Edit</button>
+    </div>
+</div>
+
+</form>
+
+</div>
+
+<%-include("./partials/footer")-%>
+
+  
