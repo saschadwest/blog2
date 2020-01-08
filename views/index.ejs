@@ -5,50 +5,48 @@
 <%=blog.Lname%>
 <%=blog.image%>
 <%=blog.content%>
-<%=blog.Favfood%>
+<%=blog.food%>
 <%=blog.created%>
 	<%})%> -->
 
-<h3 class="ui center aligned header">
+
+<div class= "ui main text container">
+	<div class="ui huge header">
 	CREATIVE BLOG
-</h3>
-<div class= "ui container">
-	<div class="ui divided items">
+	</div>
+	
+	<div class="ui top attached segment">
+		<!-- divider is triggered by item elemebts created by the invisible forEach-->
+		<div class="ui divided items">
 		<%blogs.forEach(function(blog){%>
-			
-				<div class="content">
-					<a class="header"><%=blog.Fname%> <%=blog.Lname%></a>
-					<div class="item">
-					<div class="ui small image">
-						<img src="<%=blog.image%>">
-						</div>
-					</div>
-					<div class="meta">
-						<a><%=blog.created.toDateString()%></a>
-						<a>Intresting</a>
-					</div>
-					<div class="description">
-						<%=blog.content%>
-					</div>
-					<div class="extra">
-						<p>
-							My favorite food is: 
-						</p>
-						<%=blog.Favfood%>
-					</div>
+			<div class="item">
+				<div class="image small bordered rounded">
+					<img src="<%=blog.image%>">
 				</div>
+				<!-- use for meta data time and name -->
+				<div class="content">
+					<a class="header" href="/blogs"><%=blog.Fname%> <%=blog.Lname%></a>
+					<div class="meta">
+						<a class ="ui header" href="/blogs/<%=blog._id%>">Click for more..</a>
+						<span><%=blog.created.toDateString()%></span>
+					</div>
+				<div class="content">
+					<p>
+						 "<%=blog.food%>"
+					</p>
+				</div>
+				<div class="description">
+					<p>
+						<%=blog.content.substring(0,100)%>
+					</p>
+				</div>
+				</div>
+			</div>
 		<%})%>
 		</div>
 	</div>
-</div>
 
-	
-
-
-
-
-
-
+	</div>
 
 
 

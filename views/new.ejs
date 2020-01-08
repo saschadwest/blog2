@@ -1,44 +1,50 @@
+
 <%-include("./partials/header")-%>
 <div class="ui main text container segment">
 	<form class="ui form" action="/blogs" method="POST">
-  <h4 class="ui dividing header">Person Blog</h4>
+  <h4 class="ui dividing huge header center aligned">ABOUT YOU</h4>
   <div class="field">
-    <label>Name</label>
+    
     <div class="two fields">
       <div class="field">
+		  <label>FIRST NAME:</label>
         <input type="text" name="blog[Fname]" placeholder="First Name">
       </div>
       <div class="field">
+		  <label>LAST NAME:</label>
         <input type="text" name="blog[Lname]" placeholder="Last Name">
       </div>
+		
     </div>
   </div>
-  <div class="field">
-    <label>Image</label>
-    <div class="fields">
-      <div class="eight wide field">
-        <input type="text" name="blog[image]" placeholder="Image">
-      </div>
-		<label>Favorite Food</label>
-      <div class="four wide field">
-        <input type="text" name="blog[Favfood]" placeholder="Favorite Food">
-      </div>
-    </div>
-  </div>
+
+	<div class="two fields">
+		<div class="field">
+			<label >IMAGE:</label>
+			<input type="text" name="blog[image]" placeholder="Image">
+		</div>
+		<div class="field">
+			<label>FAVORITE FOOD:</label>
+			<input type="text" name="blog[food]" placeholder="Favorite Food">
+		</div>
+	</div>
   
-  <h4 class="ui dividing header">CONTENT</h4>
+  <h4 class="ui center aligned dividing header">CONTENT</h4>
  
    <div class="ui form">
   <div class="field">
-    <label>Summary</label>
+    <label style="text-align:center">Summary</label>
     <textarea required name="blog[content]"></textarea>
   </div>
+	<div class="extra">
+        <button type="submit" class="ui red button">Red</button>
+    </div>
 </div>
 
-   
-<button type="submit" class="ui red button">Red</button>
 </form>
 
 </div>
 
 <%-include("./partials/footer")-%>
+
+  
